@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout>
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>autorelated/slick/slick.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>autorelated/autorelated.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>autorelated/slick/slick.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>autorelated/slick/slick-theme.css</name></action>
+        </reference>
+        <reference name="product.info.additional">
+            <block type="product_autorelated/autorelated" name="product.autorelated" as="autorelated" template="autorelated/catalog/product/view/autorelated.phtml" />
+        </reference>
+    </catalog_product_view>
+</layout>

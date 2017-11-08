@@ -1,0 +1,32 @@
+<?php
+/**
+ * @var $this Product_Autorelated_Block_Autorelated
+ */
+
+$_collection = $this->getRelatedCollection();
+?>
+<?php if (count($_collection) > 0): ?>
+    <aside class="autorelated-block">
+        <h2><?php echo $this->__('Other products selected for you'); ?></h2>
+        <div class="clearfix">
+            <div id="autorelated-slider">
+                <?php foreach ($_collection as $_product): ?>
+                    <div class="item">
+                        <a href="<?php echo $_product->getProductUrl() ?>"
+                           title="<?php echo $this->escapeHtml($_product->getName()) ?>">
+                            <article>
+                                <picture class="image">
+                                    <img class="img-responsive"
+                                         src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(400) ?>"
+                                         alt="<?php echo $this->escapeHtml($_product->getName()) ?>">
+                                </picture>
+                                <h3 class="product-name"><?php echo $this->escapeHtml($_product->getName()) ?></h3>
+                                <?php echo $this->getPriceHtml($_product, true, '-autorelated') ?>
+                            </article>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </aside>
+<?php endif; ?>

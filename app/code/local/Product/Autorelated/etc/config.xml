@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Product_Autorelated>
+            <version>0.0.1</version>
+        </Product_Autorelated>
+    </modules>
+    <global>
+        <blocks>
+            <product_autorelated>
+                <class>Product_Autorelated_Block</class>
+            </product_autorelated>
+        </blocks>
+        <helpers>
+            <product_autorelated>
+                <class>Product_Autorelated_Helper</class>
+            </product_autorelated>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <product_autorelated>
+                    <file>autorelated/autorelated.xml</file>
+                </product_autorelated>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <catalog>
+            <autorelated_group>
+                <count>10</count>
+            </autorelated_group>
+        </catalog>
+    </default>
+</config>
